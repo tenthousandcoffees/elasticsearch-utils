@@ -1,0 +1,572 @@
+{
+  "mappings": {
+    "delete.accounts": {
+      "properties": {
+        "about": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "active_location": {
+          "type": "nested",
+          "properties": {
+            "location": {
+              "type": "nested",
+              "properties": {
+                "coordinates": {
+                  "type": "geo_point"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "default_portrait_bg_color": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "education": {
+          "type": "nested",
+          "properties": {
+            "class_of": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "faculty": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "program": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "school": {
+              "type": "string",
+              "analyzer": "english"
+            }
+          }
+        },
+        "experience": {
+          "type": "object",
+          "properties": {
+            "job_title": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "organization_name": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "full_name": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "groups": {
+          "type": "nested",
+          "properties": {
+            "document": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "industries": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "inviteable": {
+              "type": "boolean"
+            },
+            "join_date": {
+              "type": "date"
+            },
+            "offerings": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "role": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "searchable": {
+              "type": "boolean"
+            }
+          }
+        },
+        "industry_suggestions": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "portrait_original_url": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "slug": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "short_bio": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "biggest_inspiration": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "created_at": {
+          "type": "date"
+        },
+        "dream_coffee": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "exciting_thing": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "geo_location": {
+          "type": "nested",
+          "properties": {
+            "address": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "location": {
+              "type": "nested",
+              "properties": {
+                "coordinates": {
+                  "type": "geo_point"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "industries": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "level_experience": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "life_change_convo": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "little_known_fact": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "location": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "my_goal": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "one_thing_1_year": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "one_thing_5_years": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "recent_projects": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "status": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "three_things_learned": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "topics_of_interest": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "health_check_string": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "accounts": {
+      "properties": {
+        "about": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "active_location": {
+          "type": "nested",
+          "properties": {
+            "location": {
+              "type": "nested",
+              "properties": {
+                "coordinates": {
+                  "type": "geo_point"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "default_portrait_bg_color": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "education": {
+          "type": "nested",
+          "properties": {
+            "class_of": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "faculty": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "program": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "school": {
+              "type": "string",
+              "analyzer": "english"
+            }
+          }
+        },
+        "experience": {
+          "type": "object",
+          "properties": {
+            "job_title": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "organization_name": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "full_name": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "groups": {
+          "type": "nested",
+          "properties": {
+            "document": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "industries": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "inviteable": {
+              "type": "boolean"
+            },
+            "join_date": {
+              "type": "date"
+            },
+            "offerings": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "role": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "searchable": {
+              "type": "boolean"
+            }
+          }
+        },
+        "industry_suggestions": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "portrait_original_url": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "slug": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "short_bio": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "biggest_inspiration": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "created_at": {
+          "type": "date"
+        },
+        "dream_coffee": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "exciting_thing": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "geo_location": {
+          "type": "nested",
+          "properties": {
+            "address": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "location": {
+              "type": "nested",
+              "properties": {
+                "coordinates": {
+                  "type": "geo_point"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "industries": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "level_experience": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "life_change_convo": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "little_known_fact": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "location": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "my_goal": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "one_thing_1_year": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "one_thing_5_years": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "recent_projects": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "status": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "three_things_learned": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "topics_of_interest": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "health_check_string": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "groups": {
+      "properties": {
+        "background_color": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "card_background_image": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "content": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "default_portrait_bg_color": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "group_type": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "logo_url": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "name": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "slug": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "topics_of_interest": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "about": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "created_at": {
+          "type": "date"
+        },
+        "industries": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "invisible": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "health_check_string": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "opportunities": {
+      "properties": {
+        "description": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "logo_url": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "opportunity_action_label": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "opportunity_image": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "opportunity_type": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "owner_group": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "slug": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "title": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "content": {
+          "type": "string",
+          "analyzer": "english"
+        },
+        "created_at": {
+          "type": "date"
+        },
+        "end_date": {
+          "type": "date"
+        },
+        "event_end_date": {
+          "type": "date"
+        },
+        "event_location": {
+          "type": "nested",
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "address2": {
+              "type": "string"
+            },
+            "custom_label": {
+              "type": "string",
+              "analyzer": "english"
+            },
+            "location": {
+              "type": "nested",
+              "properties": {
+                "coordinates": {
+                  "type": "geo_point"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": {
+              "type": "string",
+              "analyzer": "english"
+            }
+          }
+        },
+        "event_start_date": {
+          "type": "date"
+        },
+        "featured_accounts": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "industries": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "invisible": {
+          "type": "boolean"
+        },
+        "restricted_group": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "start_date": {
+          "type": "date"
+        },
+        "status": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "health_check_string": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    }
+  }
+}
