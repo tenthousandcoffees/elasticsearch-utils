@@ -400,6 +400,10 @@
     },
     "groups": {
       "properties": {
+        "approved_domains": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
         "background_color": {
           "type": "string",
           "index": "not_analyzed"
@@ -420,13 +424,30 @@
           "type": "string",
           "index": "not_analyzed"
         },
+        "join_type": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
         "logo_url": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "offerings": {
           "type": "string",
           "index": "not_analyzed"
         },
         "name": {
           "type": "string",
           "analyzer": "english"
+        },
+        "roles": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
         },
         "slug": {
           "type": "string",
