@@ -8,6 +8,9 @@
 ### Fixed
 
 ### Removed
-- Remove `delete.accounts` bandaid from Elasticsearch mappings
 
 ### Deprecated
+
+## [0.1.0]
+### Removed
+- Remove `delete.accounts` bandaid from Elasticsearch mappings
